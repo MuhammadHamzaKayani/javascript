@@ -1,2 +1,47 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even</title>
+</head>
+<body>
+
+
+    <h1>Find Even And Odd Numbers...</h1>
+
+    <form onsubmit="calculate(); return false;" >
+        <label for="cn">Check Number</label>
+        <input type="number" required id="cn" min="1" placeholder="Enter the Number">
+
+        <button type="submit">Press</button>
+    </form>
+
+   <p id="result"></p>
+    
+
+    <script>
+
+        function calculate(){
+            let cn = document.querySelector("#cn").value;
+
+           cn = Number(cn)
+
+           result = cn % 2
+
+           let resultline =
+           `You entered ${cn} and your Ans is ready <b>${result}</b>
+           <br><br>
+           (if Ans is equal to 0 its even otherwise it is odd )`;
+
+           document.querySelector("#result").innerHTML = resultline;
+
+
+        }
+
+
+
+    </script>
+</body>
+</html>
